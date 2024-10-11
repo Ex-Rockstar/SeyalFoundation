@@ -1,10 +1,10 @@
 import React from 'react';
 import { LinkedIn, Instagram } from '@mui/icons-material'; // Importing MUI icons
-import director from './Team Mates/ruthi.jpg';
-import cofounder1 from './Team Mates/vishnu.jpg';
-import cofounder2 from './Team Mates/lohith.jpg';
-import cofounder3 from './Team Mates/lukesh.jpg';
-import developer from './Team Mates/guru.jpg';
+import director from './TeamMates/ruthi.jpg';
+import cofounder1 from './TeamMates/vishnu.jpg';
+import cofounder2 from './TeamMates/lohith.jpg';
+import cofounder3 from './TeamMates/lukesh.jpg';
+import developer from './TeamMates/guru.jpg';
 import img6 from '../Project/Aayul/img/naveen.jpeg';
 // Team members data
 const teamMembers = [
