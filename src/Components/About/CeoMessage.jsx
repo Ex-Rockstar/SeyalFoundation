@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'; // Import forwardRef
-import ceo from './Team Mates/vignesh.jpg';
+import ceo from './TeamMates/vignesh.jpg';
 
 const CeoMessage = forwardRef((props, ref) => { // Forward ref to the component
   
