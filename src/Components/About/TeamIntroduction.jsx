@@ -3,7 +3,7 @@ import { LinkedIn, Instagram } from '@mui/icons-material'; // Importing MUI icon
 import director from './TeamMates/ruthi.jpg';
 import cofounder1 from './TeamMates/vishnu.jpg';
 import cofounder2 from './TeamMates/lohith.jpg';
-import cofounder3 from './TeamMates/lukesh.jpg';
+import cofounder3 from './TeamMates/lukeshh.jpg';
 import developer from './TeamMates/guru.jpg';
 import img6 from '../Project/Aayul/img/naveen.jpeg';
 // Team members data
