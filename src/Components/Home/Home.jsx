@@ -6,13 +6,13 @@ import Features from './Features';
 import Timeline from '../Timeline';
 import FeedbackSlider from './FeedbackSlider';
 import Footer from './Footer';
-import Header from './Header';
+
 import Partner from './Partner';
 
 const Home = () => {
   return (
     <div>
-      <Header />
+      
       <Hero />
       <About />
       <Features />
