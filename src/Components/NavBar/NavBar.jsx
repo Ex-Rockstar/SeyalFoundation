@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
 import logo from '../../assets/seyallogo.svg';
 
-const Header = () => {
+const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate(); // Initialize useNavigate
 
@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <>
             <header className="font-medium font-poppins fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%] bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl drop-shadow-2xl transition-all duration-300">
-                <nav className="flex justify-between items-center w-[92%] mx-auto my-2">
+            <nav className="flex justify-between items-center w-[92%] mx-auto my-2">
                     {/* Hamburger Icon */}
                     <div
                         onClick={toggleMenu}
@@ -143,4 +143,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NavBar;
