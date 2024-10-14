@@ -25,19 +25,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/project-page" element={<ProjectPage />} />
-          <Route path="/gallery" element={<Services />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/signin" element={<Join />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="project-page" element={<ProjectPage />} />
+          <Route path="gallery" element={<Services />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="signin" element={<Join />} />
           {/* Define routes for individual project pages */}
-          <Route path="/aayul" element={<AayulPage />} />
-          <Route path="/aram" element={<AramPage />} />
-          <Route path="/manidham" element={<ManidhamPage />} />
-          <Route path="/praani" element={<PraaniPage />} />
-          <Route path="/prakrithi" element={<PrakrithiPage />} />
-          <Route path="/social-internship" element={<SocialInternshipPage />} />
-          <Route path="/rescue-relief" element={<RescueReliefPage />} />
+          <Route path="aayul" element={<AayulPage />} />
+          <Route path="aram" element={<AramPage />} />
+          <Route path="manidham" element={<ManidhamPage />} />
+          <Route path="praani" element={<PraaniPage />} />
+          <Route path="prakrithi" element={<PrakrithiPage />} />
+          <Route path="social-internship" element={<SocialInternshipPage />} />
+          <Route path="rescue-relief" element={<RescueReliefPage />} />
         </Route>
       </Routes>
     </Router>
