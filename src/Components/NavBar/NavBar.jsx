@@ -46,7 +46,7 @@ const NavBar = () => {
                             <li>
                                 <a
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="/about-us"
+                                    href="about-us"
                                 >
                                     About Us
                                 </a>
@@ -54,7 +54,7 @@ const NavBar = () => {
                             <li>
                                 <a
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="/project-page"
+                                    href="project-page"
                                 >
                                     Our Projects
                                 </a>
@@ -62,7 +62,7 @@ const NavBar = () => {
                             <li>
                                 <a
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="/gallery"
+                                    href="gallery"
                                 >
                                     Gallery
                                 </a>
@@ -70,7 +70,7 @@ const NavBar = () => {
                             <li>
                                 <a
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="/contact-us"
+                                    href="contact-us"
                                 >
                                     Contact us
                                 </a>
@@ -107,7 +107,7 @@ const NavBar = () => {
                         <li>
                             <a
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="/about-us"
+                                href="about-us"
                             >
                                 About Us
                             </a>
@@ -115,7 +115,7 @@ const NavBar = () => {
                         <li>
                             <a
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="/project-page"
+                                href="project-page"
                             >
                                 Our Projects
                             </a>
@@ -123,7 +123,7 @@ const NavBar = () => {
                         <li>
                             <a
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="/contact-us"
+                                href="contact-us"
                             >
                                 Contact us
                             </a>
