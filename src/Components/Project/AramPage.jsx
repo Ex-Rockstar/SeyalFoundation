@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 import Hero from './Aram/Hero'
 import Features from './Aram/Features'
 import TeamMates from './Aram/TeamMates'
@@ -10,7 +9,7 @@ import InstagramSection from './Aram/InstagramSection'
 function AramPage() {
   return (
     <div>
-      <Header />
+      
       <Hero />
       <Features />
       <TeamMates />

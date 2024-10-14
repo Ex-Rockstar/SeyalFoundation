@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import { motion } from 'framer-motion';
-import Header from '../Home/Header';
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { Email, Phone, LinkedIn, Instagram } from '@mui/icons-material';
@@ -76,7 +76,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <Header />
+      
       <section className="py-16 bg-slate-50 mb-10 px-4 sm:px-8 max-w-4xl ml-auto mr-auto mt-[3.5cm] text-center ">
         <motion.h1
           initial={{ opacity: 0 }}

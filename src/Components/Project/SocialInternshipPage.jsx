@@ -5,12 +5,12 @@ import InternFeedbackPage from './SocialInternship/InternFeedbackPage'
 import RolesAndResponsibilities from './SocialInternship/RolesAndResponsibilities'
 import ApplyNow from './SocialInternship/ApplyNow'
 import InternshipGallery from './SocialInternship/InternshipGallery'
-import Header from '../Home/Header'
+
 
 function SocialInternshipPage() {
   return (
     <div>
-      <Header />
+
       <Hero />
       <AboutInternship />
       <RolesAndResponsibilities />

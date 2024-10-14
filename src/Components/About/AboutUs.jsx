@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Header from '../Home/Header'
+
 import Hero from './Hero'
 import CeoMessage from './CeoMessage'
 import TeamIntroduction from './TeamIntroduction'
@@ -13,7 +13,7 @@ function AboutUs() {
 
   return (
     <div>
-      <Header />
+
       <Hero scrollToCeoMessage={ceoMessageRef} /> {/* Pass the ref to Hero */}
       <CeoMessage ref={ceoMessageRef} /> {/* Attach the ref to CeoMessage */}
       <ChapterPage />

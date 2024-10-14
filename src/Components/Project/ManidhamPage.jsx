@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+
 import Hero from './Manidham/Hero'
 import Features from './Manidham/Features'
 import TeamMates from './Manidham/TeamMates'
@@ -10,7 +10,7 @@ import InstagramSection from './Manidham/InstagramSection'
 function ManidhamPage() {
   return (
     <div>
-      <Header />
+      
       <Hero />
       <Features />
       <TeamMates />

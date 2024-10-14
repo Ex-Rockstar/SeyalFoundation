@@ -7,7 +7,7 @@ import img18 from './img/praani.jpg';
 import img19 from './img/Prakrithi.jpg';
 import img20 from './img/socialinternship.jpg';
 import img21 from './img/rescueandrelief.jpg';
-import Header from '../Home/Header';
+
 
 // Project data
 const projects = [
@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index }) => {
 const ProjectPage = () => {
   return (
     <div className="min-h-screen py-12 bg-gray-100">
-      <Header />
+      
       <div className="mt-20 mb-12 text-center">
         <h1 className="inline-block text-4xl font-medium tracking-[0.3rem] uppercase text-center text-gray-800 border-4 p-2 border-[#8b4513]">Our Projects</h1>
       </div>
