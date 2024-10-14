@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
+import { Link, useNavigate } from 'react-router-dom'; // Use Link instead of href
 import logo from '../../assets/seyallogo.svg';
 
 const NavBar = () => {
@@ -18,7 +18,7 @@ const NavBar = () => {
     return (
         <>
             <header className="font-medium font-poppins fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%] bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl drop-shadow-2xl transition-all duration-300">
-            <nav className="flex justify-between items-center w-[92%] mx-auto my-2">
+                <nav className="flex justify-between items-center w-[92%] mx-auto my-2">
                     {/* Hamburger Icon */}
                     <div
                         onClick={toggleMenu}
@@ -36,44 +36,44 @@ const NavBar = () => {
                     <div className="flex-row items-center hidden space-x-4 md:flex">
                         <ul className="flex flex-row space-x-4">
                             <li>
-                                <a
+                                <Link
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="/"
+                                    to="/"
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="about-us"
+                                    to="/about-us"
                                 >
                                     About Us
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="project-page"
+                                    to="/project-page"
                                 >
                                     Our Projects
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="gallery"
+                                    to="/gallery"
                                 >
                                     Gallery
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                    href="contact-us"
+                                    to="/contact-us"
                                 >
                                     Contact us
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -97,36 +97,36 @@ const NavBar = () => {
                 >
                     <ul className="flex flex-col p-4 space-y-4">
                         <li>
-                            <a
+                            <Link
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="/"
+                                to="/"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="about-us"
+                                to="/about-us"
                             >
                                 About Us
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="project-page"
+                                to="/project-page"
                             >
                                 Our Projects
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
-                                href="contact-us"
+                                to="/contact-us"
                             >
                                 Contact us
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <button
