@@ -4,7 +4,7 @@ import director from './TeamMates/ruthi.jpg';
 import cofounder1 from './TeamMates/vishnu.jpg';
 import cofounder2 from './TeamMates/lohith.jpg';
 import cofounder3 from './TeamMates/lukeshh.jpg';
-import developer from './TeamMates/guru.jpg';
+import developer from './TeamMates/madhu.jpg';
 import img6 from '../Project/Aayul/img/naveen.jpeg';
 // Team members data
 const teamMembers = [
@@ -37,11 +37,11 @@ const teamMembers = [
     instagram: 'https://www.instagram.com/lukeshbarath'
   },
   {
-    name: 'Guru Sanjay R K',
+    name: 'Madhumitha Dasarathy',
     role: 'Developer',
     image: developer, 
-    linkedin: 'https://www.linkedin.com/in/gurusanjay',
-    instagram: 'https://www.instagram.com/gurusanjay'
+    linkedin: 'http://linkedin.com/in/madhudasarat',
+    instagram: 'https://www.instagram.com/madhumithadasarathy/profilecard/?igsh=MTF2bmR4cGhpbTJsaA=='
   },
   {
     name: 'Naveen D',
