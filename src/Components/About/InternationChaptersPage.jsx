@@ -29,7 +29,7 @@ const InternationalChaptersPage = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasStartedCounting) {
             setHasStartedCounting(true);
-            incrementNumber(setVolunteers, 1500, 2000); // Set the volunteers count to 1500
+            incrementNumber(setVolunteers, 300, 2000); // Set the volunteers count to 1500
           }
         });
       },
@@ -56,11 +56,10 @@ const InternationalChaptersPage = () => {
           className="flex flex-col justify-center p-10 lg:w-3/5"
         >
           <h1 className="mb-6 text-4xl font-semibold tracking-widest text-[#8b4513] uppercase">
-            Overseas Chapter
+            Overseas Volunteers
           </h1>
           <div className="space-y-6 text-2xl tracking-[0.3rem] text-gray-700">
-            <p className="text-3xl font-medium text-[#8b4513]">
-              <span className="text-gray-900 tracking-[0.3rem]">VOLUNTEERS:</span> <br />
+            <p className="text-3xl font-medium text-black">
               {volunteers.toLocaleString()}
             </p>
           </div>
