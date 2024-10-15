@@ -4,15 +4,15 @@ import Slider from 'react-slick';
 // Sample feedback data
 const feedbacks = [
   {
-    name: 'John Doe',
+    name: 'Rakesh S A',
     feedback: 'The Social Internship Programme by Seyal Foundation was an incredible experience. I learned so much and had the opportunity to contribute meaningfully.',
   },
   {
-    name: 'Jane Smith',
+    name: 'Kayalvizhi .M',
     feedback: 'Seyal Foundation’s initiatives are truly inspiring. The workshops and activities were well-organized and impactful.',
   },
   {
-    name: 'Alice Johnson',
+    name: 'R. Ramesh',
     feedback: 'Participating in Seyal’s programs gave me a sense of purpose and achievement. The team was supportive, and the projects were well thought out.',
   },
   // Add more feedback objects here
