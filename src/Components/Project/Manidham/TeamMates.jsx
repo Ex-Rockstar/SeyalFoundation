@@ -3,6 +3,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import img1 from './img/tharanni.jpg';
 import img2 from './img/madhu.jpeg';
+import img3 from './img/nikitha.png';
+import img4 from './img/gnanesh.png';
+import img5 from './img/nivetha.png';
+import img6 from './img/jayanth.png';
 // First card data for Project Lead
 const projectLead = {
   name: 'Tharanni S V',
@@ -24,28 +28,28 @@ const teamMembers = [
   {
     name: 'Jayanth',
     role: 'Fundraising Coordinator',
-    image: img1, // Replace with actual image path
+    image: img6, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/carolwhite',
     instagram: 'https://www.instagram.com/carolwhite'
   },
   {
     name: 'Nivethitha',
     role: 'Community Outreach Officer',
-    image: img1, // Replace with actual image path
+    image: img5, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/davidbrown',
     instagram: 'https://www.instagram.com/davidbrown'
   },
   {
     name: 'Gnanesh',
     role: 'Volunteer Manager',
-    image: img1, // Replace with actual image path
+    image: img4, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/evagreen',
     instagram: 'https://www.instagram.com/evagreen'
   },
   {
     name: 'Nikitha',
     role: 'Finance & Administration',
-    image: img1, // Replace with actual image path
+    image: img3, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/frankharris',
     instagram: 'https://www.instagram.com/frankharris'
   },
@@ -66,11 +70,11 @@ const TeamMates = () => {
 
       {/* Project Lead */}
       <div className="flex justify-center mb-12">
-        <div className="flex flex-col items-center p-6 transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-lg w-80 h-80 hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center p-6 transition-all duration-300 ease-in-out transform bg-gray-100 rounded-lg shadow-lg w-80 h-80 hover:scale-105 hover:shadow-xl">
           <img
             src={projectLead.image}
             alt={projectLead.name}
-            className="mb-4 transition-transform duration-300 rounded-full w-28 h-28 hover:scale-110"
+            className="mb-4 transition-transform duration-300 rounded-full w-28 h-28 hover:scale-110 bg-gray-100"
           />
           <h2 className="text-xl font-semibold tracking-widest uppercase text-[#254986] text-center ml-auto mr-auto">{projectLead.name}</h2>
           <p className="ml-auto mr-auto text-center text-gray-600">{projectLead.role}</p>

@@ -7,6 +7,7 @@ import img3 from './img/pragadeeswari.jpg';
 import img4 from './img/akshaya.jpg';
 import img5 from './img/madhumitha.jpg';
 import img6 from './img/logadeepak.jpeg';
+import img7 from './img/raghuram.jpg';
 
 // First card data for Project Lead
 const projectLead = {
@@ -43,7 +44,7 @@ const teamMembers = [
   {
     name: 'Raguram Kumar',
     role: 'Fundraising Coordinator',
-    image: img5, // Replace with actual image path
+    image: img7, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/evagreen',
     instagram: 'https://www.instagram.com/evagreen'
   },
@@ -75,7 +76,7 @@ const TeamMates = () => {
           <img
             src={projectLead.image}
             alt={projectLead.name}
-            className="mb-4 transition-transform duration-300 rounded-full w-28 h-28 hover:scale-110"
+            className="mb-4 transition-transform duration-300 rounded-full w-28 h-28 hover:scale-110 bg-gray-100"
           />
           <h2 className="text-xl font-semibold tracking-widest uppercase text-[#254986] text-center ml-auto mr-auto">{projectLead.name}</h2>
           <p className="ml-auto mr-auto text-center text-gray-600">{projectLead.role}</p>
