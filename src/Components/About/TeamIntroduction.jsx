@@ -55,7 +55,7 @@ const teamMembers = [
 const TeamIntroduction = () => {
   return (
     <section className="py-12 bg-gray-100">
-      <div className="max-w-6xl p-6 mx-auto bg-white rounded-lg shadow-lg drop-shadow-2xl">
+      <div className="max-w-6xl p-6 mx-auto   ">
         <h2 className="mb-8 text-3xl font-medium text-center text-[#8b4513] uppercase tracking-widest">Meet Our Team</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (

@@ -52,7 +52,7 @@ const ChapterPage = () => {
   }, [hasStartedCounting]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center pb-10 bg-gray-100">
       <div className="flex flex-col w-full max-w-6xl overflow-hidden bg-white rounded-lg shadow-lg drop-shadow-2xl lg:flex-row">
         {/* Left Text Section */}
         <div

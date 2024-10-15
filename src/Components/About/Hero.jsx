@@ -4,54 +4,44 @@ import img2 from '../../assets/img2.jpg';
 import img3 from '../../assets/img3.jpg';
 import img4 from '../../assets/img4.jpg';
 
-const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4]; // Array of four images
 
-const Hero = ({ scrollToCeoMessage }) => { // Accept the ref as a prop
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Change image every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
-    const handleGetToKnowUsClick = () => {
-        if (scrollToCeoMessage.current) {
-            scrollToCeoMessage.current.scrollIntoView({ behavior: 'smooth' }); // Scroll to the CEO message section smoothly
-        }
-    };
+  return (
+    <div className="flex items-center justify-center   bg-white mt-[4cm]">
+      <div className="flex flex-col w-full overflow-hidden  lg:flex-row">
+        {/* Left Text Section */}
+        <div className="flex flex-col justify-center p-10 mt-5 lg:w-1/2">
+          <h1 className="mb-2 text-4xl font-medium text-gray-800">Empowering Change Through Teamwork</h1>
+          <p className="text-xl tracking-widest uppercase text-[#8b4513] mb-2">Together, We Achieve the Extraordinary</p>
+          <p className="mb-6 text-lg text-gray-700">
+          At Seyal Foundation, we harness the power of collaboration. Our strength comes from passionate individuals united to uplift communities through education, healthcare, and sustainable development. With teamwork at our core, we strive to create a future where every voice is heard, and every action counts. Join us, and together, we can make a difference.            <br />
+            <br />
 
-    return (
-        <div className="relative h-screen overflow-hidden">
-            <div
-                className="absolute inset-0 transition-all duration-1000 ease-in-out bg-center bg-cover"
-                style={{ backgroundImage: `url(${images[currentImageIndex]})`, filter: 'brightness(40%)' }} // Dim background image
-            />
-            <div className="relative flex flex-col items-center justify-center w-full h-full px-4 text-center">
-                <div className="w-full max-w-3xl mx-auto mt-12"> {/* Increased width and margin-top */}
-                    <h1 className="mb-4 text-4xl font-bold tracking-widest text-white uppercase md:text-5xl lg:text-6xl">
-                        Igniting Hope, Building Tomorrow
-                    </h1>
-                    <p className="mb-8 text-lg text-white md:text-xl lg:text-xl">
-                        Seyal Foundation is dedicated to empowering marginalized communities through education, healthcare, and sustainable development.
-                    </p>
-                    <a href="#explore" className="px-8 py-4 mb-2 text-lg tracking-widest text-white uppercase transition-colors duration-300 rounded-full bg-primary hover:bg-primary-dark">
-                        Join us in creating a brighter future.
-                    </a>
-                    <br></br>
-                    <br></br>
-                    <button 
-                        className="font-medium text-white bg-[#8b4513] mt-5 p-2 pl-4 pr-4 rounded-3xl hover:bg-opacity-70 tracking-widest "
-                        onClick={handleGetToKnowUsClick} // Call the scroll function
-                    >
-                        GET TO KNOW US
-                    </button>
-                </div>
-            </div>
+          </p>
         </div>
-    );
+
+        {/* Right Image Slider Section */}
+        <div className="relative lg:w-1/2 h-96 lg:h-auto">
+          <img
+            src={images[currentImageIndex]}
+            alt="Social Internship"
+            className="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
