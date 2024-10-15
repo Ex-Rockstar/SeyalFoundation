@@ -1,61 +1,78 @@
-import React, { useState, useEffect } from 'react';
-import ukImage from './assets/uk.jpg'; // Replace with your image path
-import omanImage from './assets/oman.jpg'; // Replace with your image path
-import egyptImage from './assets/egypt.jpg'; // Replace with your image path
-
-const chapters = [
-  { name: 'United Kingdom', image: ukImage, target: 30 },
-  { name: 'Oman', image: omanImage, target: 25 },
-  { name: 'Egypt', image: egyptImage, target: 20 }
-];
+import React, { useState, useEffect, useRef } from 'react';
+import chapterImage from './assets/INTERNATIONAL.png'; // Replace with your image path
 
 const InternationalChaptersPage = () => {
-  const [volunteers, setVolunteers] = useState({
-    'United Kingdom': 0,
-    Oman: 0,
-    Egypt: 0
-  });
+  const [volunteers, setVolunteers] = useState(0);
+  const [hasStartedCounting, setHasStartedCounting] = useState(false); // State to track counting start
+  const textRef = useRef(null); // Reference to the text container
 
   // Function to increment the number to the target value
-  const incrementNumber = (name, target, duration) => {
+  const incrementNumber = (setNumber, target, duration) => {
     let start = 0;
     const increment = target / (duration / 50);
 
     const timer = setInterval(() => {
       start += increment;
       if (start >= target) {
-        setVolunteers((prev) => ({ ...prev, [name]: target }));
+        setNumber(target);
         clearInterval(timer);
       } else {
-        setVolunteers((prev) => ({ ...prev, [name]: Math.ceil(start) }));
+        setNumber(Math.ceil(start));
       }
     }, 50);
   };
 
-  // Start the count-up effect when the component mounts
+  // Intersection Observer to trigger the counter when the text is visible
   useEffect(() => {
-    chapters.forEach((chapter) => {
-      incrementNumber(chapter.name, chapter.target, 2000);
-    });
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasStartedCounting) {
+            setHasStartedCounting(true);
+            incrementNumber(setVolunteers, 1500, 2000); // Set the volunteers count to 1500
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the text container is in view
+    );
+
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => {
+      if (textRef.current) {
+        observer.unobserve(textRef.current);
+      }
+    };
+  }, [hasStartedCounting]);
 
   return (
-    <div className="py-12 bg-gray-100 ">
-      <div className="container px-4 mx-auto">
-        <h1 className="mb-12 text-4xl font-medium uppercase tracking-[0.2rem] text-center text-[#8b4513]">
-          International Chapters
-        </h1>
-        <div className="flex flex-wrap justify-center gap-8">
-          {chapters.map((chapter) => (
-            <div
-              key={chapter.name}
-              className="flex flex-col items-center w-full max-w-xs p-6 transition-transform transform bg-white rounded-lg shadow-lg hover:scale-105 hover:shadow-xl"
-            >
-              <h2 className="mb-2 text-2xl font-semibold text-gray-800">{chapter.name}</h2>
-              <p className="text-xl text-[#8b4513] font-medium mb-1">VOLUNTEERS:</p>
-              <p className="text-xl font-semibold text-gray-700">{volunteers[chapter.name]}+</p>
-            </div>
-          ))}
+    <div className="flex items-center justify-center bg-gray-100">
+      <div className="flex flex-col w-full max-w-6xl overflow-hidden bg-white rounded-lg shadow-lg drop-shadow-2xl lg:flex-row">
+        {/* Left Text Section */}
+        <div
+          ref={textRef}
+          className="flex flex-col justify-center p-10 lg:w-3/5"
+        >
+          <h1 className="mb-6 text-4xl font-semibold tracking-widest text-[#8b4513] uppercase">
+            Overseas Chapter
+          </h1>
+          <div className="space-y-6 text-2xl tracking-[0.3rem] text-gray-700">
+            <p className="text-3xl font-medium text-[#8b4513]">
+              <span className="text-gray-900 tracking-[0.3rem]">VOLUNTEERS:</span> <br />
+              {volunteers.toLocaleString()}
+            </p>
+          </div>
+        </div>
+
+        {/* Right Image Section */}
+        <div className="flex items-center justify-center p-10 lg:w-2/5">
+          <img
+            src={chapterImage}
+            alt="Local Chapter"
+            className="object-cover rounded-lg w-72 h-72" // Adjusted size
+          />
         </div>
       </div>
     </div>
