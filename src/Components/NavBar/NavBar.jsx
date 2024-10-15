@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Use Link instead of href
+import { Link, useNavigate, useLocation } from 'react-router-dom'; // Import useLocation
 import logo from '../../assets/seyallogo.svg';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
+    const location = useLocation(); // Get the current location
 
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
@@ -14,6 +15,9 @@ const NavBar = () => {
     const handleDonateClick = () => {
         navigate('/signin'); // Navigate to the Join page
     };
+
+    // Function to determine if the link is active
+    const isActiveLink = (path) => location.pathname === path;
 
     return (
         <>
@@ -37,7 +41,11 @@ const NavBar = () => {
                         <ul className="flex flex-row space-x-4">
                             <li>
                                 <Link
-                                    className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                    className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                        isActiveLink('/') 
+                                            ? 'bg-[#8b4513] text-white rounded-3xl'
+                                            : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                    }`}
                                     to="/"
                                 >
                                     Home
@@ -45,7 +53,11 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <Link
-                                    className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                    className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                        isActiveLink('/about-us') 
+                                            ? 'bg-[#8b4513] text-white rounded-3xl'
+                                            : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                    }`}
                                     to="/about-us"
                                 >
                                     About Us
@@ -53,7 +65,11 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <Link
-                                    className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                    className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                        isActiveLink('/project-page') 
+                                            ? 'bg-[#8b4513] text-white rounded-3xl'
+                                            : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                    }`}
                                     to="/project-page"
                                 >
                                     Our Projects
@@ -61,7 +77,11 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <Link
-                                    className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                    className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                        isActiveLink('/gallery') 
+                                            ? 'bg-[#8b4513] text-white rounded-3xl'
+                                            : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                    }`}
                                     to="/gallery"
                                 >
                                     Gallery
@@ -69,7 +89,11 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <Link
-                                    className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                    className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                        isActiveLink('/contact-us') 
+                                            ? 'bg-[#8b4513] text-white rounded-3xl'
+                                            : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                    }`}
                                     to="/contact-us"
                                 >
                                     Contact us
@@ -82,7 +106,7 @@ const NavBar = () => {
                     <div className="items-center hidden gap-6 md:flex">
                         <button
                             className="px-6 py-3 text-white rounded-3xl bg-[#8b4513] hover:bg-opacity-70 transition-colors duration-300"
-                            onClick={handleDonateClick} // Navigate to the Join page on click
+                            onClick={handleDonateClick}
                         >
                             Donate
                         </button>
@@ -98,7 +122,11 @@ const NavBar = () => {
                     <ul className="flex flex-col p-4 space-y-4">
                         <li>
                             <Link
-                                className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                    isActiveLink('/') 
+                                        ? 'bg-[#8b4513] text-white rounded-3xl'
+                                        : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                }`}
                                 to="/"
                             >
                                 Home
@@ -106,7 +134,11 @@ const NavBar = () => {
                         </li>
                         <li>
                             <Link
-                                className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                    isActiveLink('/about-us') 
+                                        ? 'bg-[#8b4513] text-white rounded-3xl'
+                                        : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                }`}
                                 to="/about-us"
                             >
                                 About Us
@@ -114,7 +146,11 @@ const NavBar = () => {
                         </li>
                         <li>
                             <Link
-                                className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                    isActiveLink('/project-page') 
+                                        ? 'bg-[#8b4513] text-white rounded-3xl'
+                                        : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                }`}
                                 to="/project-page"
                             >
                                 Our Projects
@@ -122,7 +158,11 @@ const NavBar = () => {
                         </li>
                         <li>
                             <Link
-                                className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white"
+                                className={`block py-2 px-4 text-gray-700 transition-colors duration-300 ${
+                                    isActiveLink('/contact-us') 
+                                        ? 'bg-[#8b4513] text-white rounded-3xl'
+                                        : 'hover:text-primary hover:bg-[#8b4513] hover:bg-opacity-70 hover:rounded-3xl hover:text-white'
+                                }`}
                                 to="/contact-us"
                             >
                                 Contact us
@@ -131,7 +171,7 @@ const NavBar = () => {
                         <li>
                             <button
                                 className="block py-2 px-4 text-white bg-[#8b4513] rounded-3xl hover:bg-opacity-70 transition-colors duration-300 w-full -mr-10"
-                                onClick={handleDonateClick} // Navigate to Join page on mobile Donate click
+                                onClick={handleDonateClick}
                             >
                                 Donate Now
                             </button>
