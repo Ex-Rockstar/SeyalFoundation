@@ -1,22 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import YouTubeIcon from '@mui/icons-material/YouTube'; // Import MUI YouTube Icon
+import InstagramIcon from '@mui/icons-material/Instagram'; // Import MUI Instagram Icon
 import img15 from './img/wayanad.png';
 import img16 from './img/rescueandrelief.jpg';
 
-// Project data with YouTube links
+// Project data with YouTube and Instagram links
 const projects = [
   {
     title: 'Wayanad Rescue & Relief',
     image: img15,
     description: 'In the serene landscapes of Wayanad, Seyal Foundation’s dynamic team of volunteers stepped forward when disaster struck, showing unparalleled commitment to aiding those in need. Our mission to uplift and support communities during times of crisis brought us to Wayanad, where we worked tirelessly to restore hope. With 600 families helped and 7000 food packets distributed, the foundation also provided essential supplies, including 1800 relief kits, 2600 napkins, and 310 sanitary kits. Additionally, our swift action resulted in the rescue of 90 families, embodying our dedication to creating a brighter tomorrow for those in distress.',
-    youtubeLink: 'https://www.youtube.com/watch?v=exampleWayanad', // Replace with actual link
+    youtubeLink: 'https://youtu.be/DvSxUa1DOeg', // Replace with actual link
+    isYouTube: true, // Indicate that this project uses YouTube
   },
   {
     title: 'Michaung Rescue & Relief',
     image: img16,
     description: 'Seyal Foundation is deeply committed to rescue and relief efforts, having provided aid during various crises. With a dynamic team ready to respond, we have helped 600 families, distributed 7,000 food packets, and handed out 1,800 relief kits. In addition, we have supplied 2,600 napkins and 310 sanitary kits to women in need, and successfully rescued 90 families from disaster-stricken areas. Seyal Foundation believes in quick action, compassion, and coordination to bring relief where it is needed most.',
-    youtubeLink: 'https://www.youtube.com/watch?v=exampleMichaung', // Replace with actual link
+    youtubeLink: 'https://www.instagram.com/reel/C0pNppsyTJb/?igsh=MW9hdGdjbG9jMzdoOQ==', // Replace with actual link
+    isYouTube: false, // Indicate that this project uses Instagram
   }
 ];
 
@@ -33,16 +36,25 @@ const ProjectCard = ({ project, index }) => {
       <div className="p-6 text-center md:w-1/2 md:text-left">
         <h2 className="mb-4 text-3xl font-medium tracking-[0.3rem] uppercase text-[#8b4513]">{project.title}</h2> {/* Title styling */}
         <p className="mb-4 text-justify text-gray-600">{project.description}</p> {/* Justified text */}
-        
-        {/* YouTube Watch Button */}
+
+        {/* Watch Button (YouTube or Instagram based on project) */}
         <a
           href={project.youtubeLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-[#8b4513] py-2 px-4 rounded-lg border border-[#8b4513]  transition-colors duration-300"
         >
-          <YouTubeIcon className="text-red-600" />
-          <span>Watch it on YouTube</span>
+          {project.isYouTube ? (
+            <>
+              <YouTubeIcon className="text-red-600" />
+              <span>Watch it on YouTube</span>
+            </>
+          ) : (
+            <>
+              <InstagramIcon className="text-pink-600" />
+              <span>Watch it on Instagram</span>
+            </>
+          )}
         </a>
       </div>
     </div>
