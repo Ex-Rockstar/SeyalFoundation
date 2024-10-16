@@ -106,7 +106,7 @@ const About = () => {
                 initial="hidden"
                 animate={sectionInView ? 'visible' : 'hidden'}
                 variants={slideInFromBottom}
-                className="grid grid-cols-2 gap-4 text-center md:grid-cols-5 lg:ml-20"
+                className="grid grid-cols-2 gap-4 text-center md:grid-cols-5 lg:ml-[3cm]"
             >
                 <div className="font-medium text-[#8b4513]">
                     <NumberAnimation value={1500} duration={2} isVisible={sectionInView} />
@@ -114,7 +114,7 @@ const About = () => {
                 </div>
                 <div className="font-medium text-[#8b4513]">
                     <NumberAnimation value={11} duration={2} isVisible={sectionInView} />
-                    <p className="font-medium text-gray-700">Branches in 11 states</p>
+                    <p className="font-medium text-gray-700">Local Chapters</p>
                 </div>
                 <div className="font-medium text-[#8b4513]">
                     <NumberAnimation value={12500} duration={2} isVisible={sectionInView} />
