@@ -16,9 +16,9 @@ function AboutUs() {
 
       <Hero scrollToCeoMessage={ceoMessageRef} /> {/* Pass the ref to Hero */}
       <CeoMessage ref={ceoMessageRef} /> {/* Attach the ref to CeoMessage */}
+      <TeamIntroduction />
       <ChapterPage />
       <InternationalChaptersPage />
-      <TeamIntroduction />
       <SocialInternshipCard />
     </div>
   )
