@@ -7,6 +7,7 @@ import img3 from './img/nikitha.png';
 import img4 from './img/gnanesh.png';
 import img5 from './img/nivetha.png';
 import img6 from './img/jayanth.png';
+import img7 from './img/giridhar.png';
 // First card data for Project Lead
 const projectLead = {
   name: 'Tharanni S V',
@@ -54,9 +55,9 @@ const teamMembers = [
     instagram: 'https://www.instagram.com/frankharris'
   },
   {
-    name: 'Gokul Prasath R',
+    name: 'Giridharan P',
     role: 'Social Media and Public Relations',
-    image: img1, // Replace with actual image path
+    image: img7, // Replace with actual image path
     linkedin: 'https://www.linkedin.com/in/gracelee',
     instagram: 'https://www.instagram.com/gracelee'
   },
