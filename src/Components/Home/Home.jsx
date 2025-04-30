@@ -8,6 +8,7 @@ import FeedbackSlider from './FeedbackSlider';
 import Footer from './Footer';
 
 import Partner from './Partner';
+import Donation from './Donation';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Timeline />
       <FeedbackSlider />
       <Partner />
+      <Donation />
     
     </div>
   );
